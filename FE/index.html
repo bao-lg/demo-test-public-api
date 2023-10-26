@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<head>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+
+    <div class="w3-container">
+        <div class="w3-bar w3-light-grey">
+            <a href="index.html" class="w3-bar-item w3-button w3-green">Home</a>
+            <a onclick="handleOpenTab('dog')" class="w3-bar-item w3-button">Get Dog Image</a>
+            <a onclick="handleOpenTab('duck')" class="w3-bar-item w3-button">Get Duck Image</a>
+            <a onclick="handleOpenTab('cat')" class="w3-bar-item w3-button">Get Cat Facts</a>
+        </div>
+
+        <div id="dogTab" hidden>
+            <button class="w3-button w3-blue" onclick="handleDogImage()">Get Random Dog Image</button>
+            <div>
+                <img hidden id="dogImg" width="400" height="400">
+            </div>
+        </div>
+
+        <div id="duckTab" hidden>
+            <button class="w3-button w3-blue" onclick="handleDuckImage()">Get Random Duck Image</button>
+            <div>
+                <img hidden id="duckImg" width="400" height="400">
+            </div>
+        </div>
+
+        <div id="catTab" hidden>
+            <div class="w3-dropdown-hover">
+                <button class="w3-button">Dropdown Cat Fact With Language</button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a onclick="handCatFactsLang('eng')" class="w3-bar-item w3-button">English</a>
+                    <a onclick="handCatFactsLang('cze')" href="#" class="w3-bar-item w3-button">Czech</a>
+                    <a onclick="handCatFactsLang('ger')" href="#" class="w3-bar-item w3-button">German</a>
+                </div>
+            </div>
+            <ul id="myList">
+            </ul>
+        </div>
+    </div>
+    <h1 id="home">Demo API External</h1>
+</body>
+
+</html>
